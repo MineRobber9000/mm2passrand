@@ -18,6 +18,10 @@ class Game:
 
 	def setETanks(self, n):
 		self.etanks = n
+		if self.etanks > 4:
+			self.etanks = 4
+		elif self.etanks < 0:
+			self.etanks = 0
 		lumberjack.info("E-tanks set to "+str(n)+".")
 
 	def defeat(self, robo):
